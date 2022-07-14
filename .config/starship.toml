@@ -1,0 +1,13 @@
+format = '''[∴ ](bold blue)[$directory](blue)
+[\[$username\]](white) [⟶ ](green) [λ](bold blue) '''
+
+[username]
+style_user = "white bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[directory]
+truncation_length = 4
+style = "light blue"

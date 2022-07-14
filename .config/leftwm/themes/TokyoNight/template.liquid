@@ -1,0 +1,49 @@
+{% comment %} Tag List {% endcomment %}
+{% for tag in workspace.tags %}
+{% if tag.mine %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#c0caf5}%{B#1a1b26}%{u#7aa2f7}%{+u} {{tag.name}} %{B-}%{F-}%{-u}
+%{A}
+{% elsif tag.visible  %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#c0caf5}%{B#1a1b26}%{u#bb9af7}%{+u} {{tag.name}} %{B-}%{F-}%{-u}
+%{A}
+{% elsif tag.busy %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#c0caf5} {{tag.name}} %{F-}
+%{A}
+{% else %}
+%{A1:$SCRIPTPATH/change_to_tag {{workspace.index}} {{tag.index}}:}
+%{F#565f89} {{tag.name}} %{F-}
+%{A}
+{% endif %}
+{% endfor %}
+
+{% comment %} Layout Symbols {% endcomment %}
+{% case workspace.layout %}
+{% when "MainAndVertStack" %}
+  [☲]
+{% when "GridHorizontal" %}
+  [☷]
+{% when "EvenHorizontal" %}
+  [‖]
+{% when "EvenVertical" %}
+  [☰]
+{% when "Fibonacci" %}
+  [@]
+{% when "LeftMain" %}
+  [☵]
+{% when "CenterMainBalanced" %}
+  [☴]
+{% when "Monocle" %}
+  [M]
+{% when "RightWiderLeftStack" %}
+  [#]
+{% when "LeftWiderRightStack" %}
+  [%]
+{% else %}
+  {{ workspace.layout }}
+{% endcase %}
+
+{% comment %} Window Title {% endcomment %}
+%{c}{{ window_title | truncate: 80 }}
