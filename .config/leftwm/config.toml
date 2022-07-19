@@ -47,7 +47,7 @@ keybind = [
 
     { command = "Execute",           value = "pactl set-sink-volume $(pactl get-default-sink)  +5%", key = "XF86XK_AudioRaiseVolume" },
     { command = "Execute",           value = "pactl set-sink-volume $(pactl get-default-sink)  -5%", key = "XF86XK_AudioLowerVolume" },
-    { command = "Execute",           value = "pactl set-sink-mute $(pactl get-default-sink) toggle", key = "XF86XK_AudioLowerVolume" },
+    { command = "Execute",           value = "pactl set-sink-mute $(pactl get-default-sink) toggle", key = "XF86XK_AudioMute"        },
 
     { command = "Execute",           value = "playerctl play-pause", key = "XF86XK_AudioPlay" },
     { command = "Execute",           value = "playerctl stop",       key = "XF86XK_AudioStop" },
