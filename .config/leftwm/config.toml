@@ -37,7 +37,7 @@ focus_new_windows = true
 modkey = "Mod4"
 mousekey = "Mod4"
 keybind = [
-    { command = "Execute",           value = "dmenu_run", modifier = "modkey", key = "r" },
+    { command = "Execute",           value = "j4-dmenu-desktop dmenu_run", modifier = "modkey", key = "r" },
     { command = "Execute",           value = "alacritty", modifier = "modkey", key = "Return" },
     { command = "Execute",           value = "firefox",   modifier = "modkey", key = "b" },
 
