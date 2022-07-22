@@ -14,13 +14,14 @@ set number
 set relativenumber
 set signcolumn=yes
 set nowrap
-set guicursor=
 set scrolloff=8
 
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+
+set clipboard=unnamedplus
 
 call plug#begin('~/.vim/plugged')
     Plug 'folke/tokyonight.nvim'
